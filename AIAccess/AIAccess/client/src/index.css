@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(220, 13%, 4%);
+  --foreground: hsl(0, 0%, 98%);
+  --muted: hsl(220, 13%, 12%);
+  --muted-foreground: hsl(220, 8%, 60%);
+  --popover: hsl(220, 13%, 6%);
+  --popover-foreground: hsl(0, 0%, 98%);
+  --card: hsl(220, 13%, 6%);
+  --card-foreground: hsl(0, 0%, 98%);
+  --border: hsl(220, 13%, 18%);
+  --input: hsl(220, 13%, 18%);
+  --primary: hsl(180, 100%, 50%);
+  --primary-foreground: hsl(220, 13%, 4%);
+  --secondary: hsl(220, 13%, 18%);
+  --secondary-foreground: hsl(0, 0%, 98%);
+  --accent: hsl(220, 13%, 18%);
+  --accent-foreground: hsl(0, 0%, 98%);
+  --destructive: hsl(0, 84%, 60%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --ring: hsl(180, 100%, 50%);
+  --radius: 0.75rem;
+
+  /* Enhanced Jarvis colors - More futuristic */
+  --jarvis-primary: hsl(180, 100%, 50%);      /* Bright cyan */
+  --jarvis-secondary: hsl(195, 100%, 45%);    /* Deep cyan */
+  --jarvis-accent: hsl(285, 100%, 65%);       /* Purple accent */
+  --jarvis-dark: hsl(220, 13%, 2%);           /* Deep dark blue */
+  --jarvis-surface: hsl(220, 13%, 8%);        /* Dark surface */
+  --jarvis-surface-light: hsl(220, 13%, 16%); /* Light surface */
+  --jarvis-surface-hover: hsl(220, 13%, 20%); /* Hover surface */
+  --jarvis-glow: hsl(180, 100%, 50%);         /* Glow effect */
+  --jarvis-success: hsl(120, 100%, 50%);      /* Success green */
+  --jarvis-warning: hsl(45, 100%, 55%);       /* Warning amber */
+  --jarvis-error: hsl(0, 85%, 65%);           /* Error red */
+  --jarvis-gradient: linear-gradient(135deg, hsl(180, 100%, 50%) 0%, hsl(285, 100%, 65%) 100%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply antialiased bg-background text-foreground;
+    background: var(--jarvis-dark);
+    background-image: 
+      radial-gradient(circle at 25% 25%, hsl(180, 100%, 50%, 0.05) 0%, transparent 50%),
+      radial-gradient(circle at 75% 75%, hsl(285, 100%, 65%, 0.05) 0%, transparent 50%);
+    color: white;
+    font-family: 'Inter', 'system-ui', sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Orbitron', 'system-ui', sans-serif;
+    font-weight: 700;
+  }
+
+  .jarvis-title {
+    font-family: 'Orbitron', 'system-ui', sans-serif;
+    font-weight: 900;
+    background: var(--jarvis-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 0 0 30px hsl(180, 100%, 50%, 0.5);
+  }
+}
+
+@layer utilities {
+  /* Color utilities */
+  .jarvis-primary { color: var(--jarvis-primary); }
+  .text-jarvis-accent { color: var(--jarvis-accent); }
+  .text-jarvis-success { color: var(--jarvis-success); }
+  .text-jarvis-warning { color: var(--jarvis-warning); }
+  .text-jarvis-error { color: var(--jarvis-error); }
+  
+  /* Background utilities */
+  .bg-jarvis-primary { background-color: var(--jarvis-primary); }
+  .bg-jarvis-secondary { background-color: var(--jarvis-secondary); }
+  .bg-jarvis-accent { background-color: var(--jarvis-accent); }
+  .bg-jarvis-dark { background-color: var(--jarvis-dark); }
+  .bg-jarvis-surface { background-color: var(--jarvis-surface); }
+  .bg-jarvis-surface-light { background-color: var(--jarvis-surface-light); }
+  .bg-jarvis-surface-hover { background-color: var(--jarvis-surface-hover); }
+  
+  /* Gradient backgrounds */
+  .bg-jarvis-gradient { background: var(--jarvis-gradient); }
+  .bg-jarvis-glass {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  /* Border utilities */
+  .border-jarvis-primary { border-color: var(--jarvis-primary); }
+  .border-jarvis-surface-light { border-color: var(--jarvis-surface-light); }
+  .border-jarvis-glow { border-color: var(--jarvis-glow); }
+  
+  /* Glow effects */
+  .glow-primary {
+    box-shadow: 0 0 20px hsl(180, 100%, 50%, 0.3);
+  }
+  .glow-accent {
+    box-shadow: 0 0 20px hsl(285, 100%, 65%, 0.3);
+  }
+  .glow-strong {
+    box-shadow: 
+      0 0 10px hsl(180, 100%, 50%, 0.5),
+      0 0 20px hsl(180, 100%, 50%, 0.3),
+      0 0 30px hsl(180, 100%, 50%, 0.2);
+  }
+  
+  /* Animation utilities */
+  .animate-pulse-glow { animation: pulse-glow 2s ease-in-out infinite; }
+  .animate-typing { animation: typing 1.5s ease-in-out infinite; }
+  .animate-slide-up { animation: slide-up 0.3s ease-out; }
+  .animate-float { animation: float 3s ease-in-out infinite; }
+  .animate-matrix { animation: matrix 20s linear infinite; }
+  .animate-scan { animation: scan 2s ease-in-out infinite; }
+  
+  /* Hover effects */
+  .hover-glow:hover {
+    box-shadow: 
+      0 0 15px hsl(180, 100%, 50%, 0.4),
+      0 0 30px hsl(180, 100%, 50%, 0.2);
+    transform: translateY(-2px);
+    transition: all 0.3s ease;
+  }
+  
+  .hover-scale:hover {
+    transform: scale(1.05);
+    transition: transform 0.2s ease;
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { 
+    box-shadow: 0 0 20px hsl(180, 100%, 50%, 0.3);
+    transform: scale(1);
+  }
+  50% { 
+    box-shadow: 0 0 40px hsl(180, 100%, 50%, 0.6);
+    transform: scale(1.02);
+  }
+}
+
+@keyframes typing {
+  0%, 60% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@keyframes slide-up {
+  0% { transform: translateY(20px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes matrix {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(100vh); }
+}
+
+@keyframes scan {
+  0%, 100% { 
+    box-shadow: inset 0 0 0 0 hsl(180, 100%, 50%, 0.1);
+  }
+  50% { 
+    box-shadow: inset 0 0 20px 0 hsl(180, 100%, 50%, 0.3);
+  }
+}
+
+/* Enhanced scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--jarvis-surface);
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--jarvis-primary), var(--jarvis-secondary));
+  border-radius: 6px;
+  border: 2px solid var(--jarvis-surface);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, var(--jarvis-glow), var(--jarvis-accent));
+  box-shadow: 0 0 10px hsl(180, 100%, 50%, 0.4);
+}
+
+/* Selection styling */
+::selection {
+  background: hsl(180, 100%, 50%, 0.3);
+  color: white;
+}
+
+/* Focus styles */
+*:focus {
+  outline: 2px solid var(--jarvis-primary);
+  outline-offset: 2px;
+}
+
+/* Glass morphism utilities */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.glass-button {
+  background: rgba(0, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(0, 255, 255, 0.3);
+  transition: all 0.3s ease;
+}
+
+.glass-button:hover {
+  background: rgba(0, 255, 255, 0.2);
+  border-color: var(--jarvis-primary);
+  box-shadow: 0 0 20px hsl(180, 100%, 50%, 0.3);
+}

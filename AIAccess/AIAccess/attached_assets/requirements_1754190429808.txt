@@ -1,0 +1,7 @@
+pyttsx3
+speechrecognition
+pywhatkit
+pyjokes
+wikipedia
+wolframalpha
+python-dotenv

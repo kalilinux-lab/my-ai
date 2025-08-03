@@ -1,0 +1,101 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "hello",
+        "hi",
+        "hey",
+        "good morning",
+        "good evening",
+        "how are you"
+      ]
+    },
+    {
+      "tag": "open_google",
+      "patterns": [
+        "open google",
+        "search on google",
+        "go to google",
+        "launch google"
+      ]
+    },
+    {
+      "tag": "open_youtube",
+      "patterns": [
+        "open youtube",
+        "play videos on youtube",
+        "go to youtube",
+        "launch youtube"
+      ]
+    },
+    {
+      "tag": "get_time",
+      "patterns": [
+        "what time is it",
+        "tell me the time",
+        "current time",
+        "time now"
+      ]
+    },
+    {
+      "tag": "play_music",
+      "patterns": [
+        "play music",
+        "play a song",
+        "play",
+        "play something on youtube",
+        "play some tunes"
+      ]
+    },
+    {
+      "tag": "tell_joke",
+      "patterns": [
+        "tell me a joke",
+        "make me laugh",
+        "say something funny",
+        "joke"
+      ]
+    },
+    {
+      "tag": "ask_who_are_you",
+      "patterns": [
+        "who are you",
+        "what are you",
+        "introduce yourself"
+      ]
+    },
+    {
+      "tag": "open_facebook",
+      "patterns": [
+        "open facebook",
+        "go to facebook",
+        "launch facebook"
+      ]
+    },
+    {
+      "tag": "get_news",
+      "patterns": [
+        "show me news",
+        "what's the news",
+        "open news",
+        "current news"
+      ]
+    },
+    {
+      "tag": "exit",
+      "patterns": [
+        "exit",
+        "stop",
+        "goodbye",
+        "bye",
+        "quit"
+      ]
+    },
+    {
+      "tag": "battery",
+      "patterns": [ "Battery ",
+                            "battery percentage " ]
+    }
+  ]
+}
